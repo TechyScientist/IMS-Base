@@ -17,9 +17,9 @@
     <h2>Sign In</h2>
     <p>Welcome to IMS Web! Please sign in to your IMS account to continue.</p>
     <form action="" method="post">
-        <label for="username">Username:</label>
+        <label for="username">Username:</label><br/>
         <input type="text" id="username" name="username" placeholder="Username" required/><br/><br/>
-        <label for="password">Password:</label>
+        <label for="password">Password:</label><br/>
         <input type="password" id="password" name="password" placeholder="Password" required/><br/><br/>
         <input type="submit" name="ims-signin-submit" value="Sign In" />
     </form>
