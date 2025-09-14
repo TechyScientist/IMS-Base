@@ -1,0 +1,110 @@
+:root {
+    --color-primary: #0099CC;
+    --color-background: #87CEFA;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Calibri Light", sans-serif;
+}
+
+body {
+    margin: 20px 200px;
+    background: var(--color-background)
+}
+
+div#body {
+    padding: 30px;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+a {
+    width: fit-content;
+    color: black;
+}
+
+a:not(td a, h2 a) {
+    display: block;
+    margin-bottom: 10px;
+}
+
+form {
+    margin-left: 30px;
+    margin-bottom: 25px;
+}
+
+label {
+    margin-right: 10px;
+}
+
+input, select {
+    padding: 5px
+}
+
+textarea {
+    width: 500px;
+    height: 350px;
+    resize: none;
+}
+
+div#header {
+    background: var(--color-primary);
+    padding: 20px;
+    color: white;
+    border-radius: 16px;
+}
+
+hr {
+    height: 20px;
+    background-color: var(--color-primary);
+    border-radius: 16px;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+p#success {
+    background-color: darkgreen;
+    color: white;
+    border-radius: 16px;
+    text-align: center;
+    padding: 10px;
+}
+
+p#warning {
+    background-color: #E6B848;
+    color: black;
+    border-radius: 16px;
+    text-align: center;
+    padding: 10px;
+}
+
+p#error {
+    background-color: darkred;
+    color: white;
+    border-radius: 16px;
+    text-align: center;
+    padding: 10px;
+}
+
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+th, td {
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px;
+    border: 1px solid black;
+}
