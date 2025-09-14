@@ -16,7 +16,7 @@
     <% } %>
     <h2>Sign In</h2>
     <p>Welcome to IMS Web! Please sign in to your IMS account to continue.</p>
-    <form action="" method="post">
+    <form action="SignInServlet" method="post">
         <label for="username">Username:</label><br/>
         <input type="text" id="username" name="username" placeholder="Username" required/><br/><br/>
         <label for="password">Password:</label><br/>
