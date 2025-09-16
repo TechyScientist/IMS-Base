@@ -12,7 +12,7 @@
         <module>ims-ear</module>
         <module>ims-ejb</module>
         <module>ims-web</module>
-        <!-- <module>ims-restful</module> -->
+        <module>ims-restful</module>
     </modules>
     <properties>
         <root.dir>${project.basedir}</root.dir>
