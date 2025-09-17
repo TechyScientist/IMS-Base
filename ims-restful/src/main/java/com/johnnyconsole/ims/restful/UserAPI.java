@@ -5,6 +5,8 @@ import com.johnnyconsole.ims.persistence.interfaces.UserDaoLocal;
 
 import javax.ejb.EJB;
 import javax.enterprise.context.RequestScoped;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import javax.ws.rs.*;
 import javax.ws.rs.core.Response;
 
@@ -19,7 +21,9 @@ public class UserAPI {
     @POST
     @Path("/signin")
     @Produces(APPLICATION_JSON)
-    public Response signin(@FormParam("username") String username, @FormParam("password") String password) {
+    public Response signin(
+            @NotNull @NotEmpty @FormParam("username") String username,
+            @NotNull @NotEmpty @FormParam("password") String password) {
         User user = userDao.getUser(username);
         String response = "{\n";
         if (user == null) {
