@@ -27,19 +27,19 @@ public class UserAPI {
         User user = userDao.getUser(username);
         String response = "{\n";
         if (user == null) {
-            response += "\t\"status\": 404\n";
+            response += "\t\"status\": 404,\n";
             response += "\t\"message\": \"User '" + username + "' not found\"\n";
         }
         else if(user.verifyPassword(password)) {
-            response += "\t\"status\": 200\n";
+            response += "\t\"status\": 200,\n";
             response += "\t\"user\": {\n";
-            response += "\t\t\"username\": \"" + username + "\"\n";
-            response += "\t\t\"name\": \"" + user.name + "\"\n";
-            response += "\t\t\"access\": " + user.accessLevel + "\n";
+            response += "\t\t\"username\": \"" + username + "\",\n";
+            response += "\t\t\"name\": \"" + user.name + "\",\n";
+            response += "\t\t\"access\": " + user.accessLevel + ",\n";
             response += "\t}";
         }
         else {
-            response += "\t\"status\": 401\n";
+            response += "\t\"status\": 401,\n";
             response += "\t\"message\": \"Incorrect password for user '" + username + "'\"\n";
         }
 
