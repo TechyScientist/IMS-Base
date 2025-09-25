@@ -111,9 +111,9 @@ public class UserAPI {
         List<User> users = userDao.getUsersExcept(except);
         for (int i = 0; i < users.size(); i++) {
             if(i < users.size() - 1) response += "\t\t\"" + users.get(i).name + " (" + users.get(i).username + ")\",\n";
-            else response += "\t\t\"" + users.get(i).name + " (" + users.get(i).username + ")\"\n\t]\n";
+            else response += "\t\t\"" + users.get(i).name + " (" + users.get(i).username + ")\"";
         }
-        return Response.ok(response + "}").build();
+        return Response.ok(response + "\n\t]\n}").build();
     }
 
     @POST
